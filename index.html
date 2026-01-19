@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filetango · Fileteado Porteño</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Filetango · Fileteado porteño: trabajos por encargo, cartelería, letras y ornamentos.">
+  <link rel="icon" href="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <img src="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png" alt="Filetango" class="brand-logo">
+        <span class="brand-text">Filetango</span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#presentacion">Presentación</a>
+        <a href="#tienda">Trabajos / Tienda</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- PRESENTACIÓN / HERO -->
+    <section id="presentacion" class="section hero">
+      <div class="hero-slider" id="heroSlider" aria-label="Galería de trabajos Filetango">
+        <!-- Colocá tus fotos en assets/hero/ y agregalas acá -->
+        <img src="assets/hero/hero.png" alt="Trabajo de fileteado 1">
+        <img src="assets/hero/malvinas.jpg" alt="Trabajo de fileteado 2">
+        <img src="assets/hero/filetango.jpg" alt="Trabajo de fileteado 3">
+      </div>
+
+      <div class="hero-overlay">
+        <h1 class="display">Filetango</h1>
+        <p class="lead">
+          Bienvenid@. Soy Lautaro y hago <strong>fileteado porteño</strong> con amor por el oficio:
+          letras, ornamentos, cintas argentinas y flores. Paseá por los trabajos y,
+          si te gusta algo, ¡lo hacemos realidad!
+        </p>
+        <div class="cta-row">
+          <a href="#tienda" class="btn">Ver trabajos y tienda</a>
+          <a href="https://wa.me/5492235192443?text=Hola%20Filetango%2C%20quiero%20un%20encargo%20de%20fileteado" target="_blank" rel="noopener" class="btn btn-ghost">Escribirme por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIENDA / TRABAJOS -->
+    <section id="tienda" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Trabajos / Tienda</h2>
+          <p class="muted">Elegí un producto y compralo online por Mercado Pago. También hacemos trabajos a medida.</p>
+        </header>
+
+        <div class="grid products">
+          <!-- PRODUCTO 1 -->
+          <article class="card product">
+            <img src="assets/product/letra.png" alt="Letra inicial fileteada" loading="lazy">
+            <div class="card-body">
+              <h3>Letra Inicial Fileteada</h3>
+              <p class="muted">En madera fibrofacil 25x25 cm, colores a elección, detalles dorados.</p>
+              <div class="price-row">
+                <span class="price">$25.000</span>
+                <!-- Reemplazar href por el link de preferencia de Mercado Pago -->
+                <a class="btn buy" href="https://mpago.la/1DhFLgs" target="_blank" rel="noopener">Comprar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2 -->
+          <article class="card product">
+            <img src="assets/product/plas.png" alt="Placa con nombre fileteado" loading="lazy">
+            <div class="card-body">
+              <h3>Placa con Nombre</h3>
+              <p class="muted">30x15 cm con cintas y flores. Ideal para puerta o negocio.</p>
+              <div class="price-row">
+                <span class="price">$78.000</span>
+                <a class="btn buy" href="https://mpago.la/1Yg5gWn" target="_blank" rel="noopener">Comprar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3 -->
+          <article class="card product">
+            <img src="assets/product/peron.png" alt="Ornamento fileteado para pared" loading="lazy">
+            <div class="card-body">
+              <h3>Ornamento de Pared</h3>
+              <p class="muted">50x20 cm, fondo rojo con acantos y cintas. Listo para colgar.</p>
+              <div class="price-row">
+                <span class="price">$55.000</span>
+                <a class="btn buy" href="https://mpago.la/2e144Wv" target="_blank" rel="noopener">Comprar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center mt-24">
+          <a href="https://wa.me/5492235192443?text=Quiero%20un%20trabajo%20a%20medida" target="_blank" rel="noopener" class="btn">
+            Pedir trabajo a medida
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA (Instagram) -->
+    <section id="galeria" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Galería</h2>
+          <p class="muted">Los últimos trabajos (se sincroniza con Instagram cuando lo activamos).</p>
+        </header>
+
+        <div id="ig-gallery" class="ig-grid"></div>
+
+        <div class="center mt-24">
+          <a href="https://instagram.com/filetango" target="_blank" rel="noopener" class="btn btn-ghost">
+            Ver más en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="container center">
+        <header class="section-header">
+          <h2>Contacto</h2>
+          <p class="muted">¿Querés un presupuesto rápido? Escribime por WhatsApp.</p>
+        </header>
+
+        <a class="btn whatsapp" target="_blank" rel="noopener"
+           href="https://wa.me/5492235192443?text=Hola%20Lauti%2C%20quiero%20encargar%20fileteado">
+          WhatsApp
+        </a>
+
+        <p class="small mt-16 muted">
+          También podés seguirnos en <a href="https://instagram.com/filetango" target="_blank" rel="noopener">Instagram @filetango</a>.
+        </p>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Filetango</strong><br/>
+        Fileteado porteño · Mar del Plata, Argentina
+      </div>
+      <div class="footer-links">
+        <a href="#presentacion">Inicio</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="copy">© <span id="year"></span> Filetango</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+<!-- TEST NETLIFY 01/17/2026 12:06:56 -->
