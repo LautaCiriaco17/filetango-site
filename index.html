@@ -9,6 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <meta name="description" content="Filetango · Fileteado porteño: trabajos por encargo, cartelería, letras y ornamentos.">
   <link rel="icon" href="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17395089750"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17395089750');
+</script>
+
 </head>
 <body>
   <!-- NAV -->
@@ -20,7 +28,7 @@
       </a>
       <nav class="menu" id="menu">
         <a href="#presentacion">Presentación</a>
-        <a href="#tienda">Trabajos / Tienda</a>
+        <a href="#galeria">Trabajos</a>
         <a href="#galeria">Galería</a>
         <a href="#contacto" class="btn btn-small">Contacto</a>
       </nav>
@@ -48,69 +56,13 @@
           si te gusta algo, ¡lo hacemos realidad!
         </p>
         <div class="cta-row">
-          <a href="#tienda" class="btn">Ver trabajos y tienda</a>
+          <a href="#galeria" class="btn">Ver trabajos</a>
           <a href="https://wa.me/5492235192443?text=Hola%20Filetango%2C%20quiero%20un%20encargo%20de%20fileteado" target="_blank" rel="noopener" class="btn btn-ghost">Escribirme por WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- TIENDA / TRABAJOS -->
-    <section id="tienda" class="section">
-      <div class="container">
-        <header class="section-header">
-          <h2>Trabajos / Tienda</h2>
-          <p class="muted">Elegí un producto y compralo online por Mercado Pago. También hacemos trabajos a medida.</p>
-        </header>
-
-        <div class="grid products">
-          <!-- PRODUCTO 1 -->
-          <article class="card product">
-            <img src="assets/product/letra.png" alt="Letra inicial fileteada" loading="lazy">
-            <div class="card-body">
-              <h3>Letra Inicial Fileteada</h3>
-              <p class="muted">En madera fibrofacil 25x25 cm, colores a elección, detalles dorados.</p>
-              <div class="price-row">
-                <span class="price">$25.000</span>
-                <!-- Reemplazar href por el link de preferencia de Mercado Pago -->
-                <a class="btn buy" href="https://mpago.la/1DhFLgs" target="_blank" rel="noopener">Comprar</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 2 -->
-          <article class="card product">
-            <img src="assets/product/plas.png" alt="Placa con nombre fileteado" loading="lazy">
-            <div class="card-body">
-              <h3>Placa con Nombre</h3>
-              <p class="muted">30x15 cm con cintas y flores. Ideal para puerta o negocio.</p>
-              <div class="price-row">
-                <span class="price">$78.000</span>
-                <a class="btn buy" href="https://mpago.la/1Yg5gWn" target="_blank" rel="noopener">Comprar</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUCTO 3 -->
-          <article class="card product">
-            <img src="assets/product/peron.png" alt="Ornamento fileteado para pared" loading="lazy">
-            <div class="card-body">
-              <h3>Ornamento de Pared</h3>
-              <p class="muted">50x20 cm, fondo rojo con acantos y cintas. Listo para colgar.</p>
-              <div class="price-row">
-                <span class="price">$55.000</span>
-                <a class="btn buy" href="https://mpago.la/2e144Wv" target="_blank" rel="noopener">Comprar</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="center mt-24">
-          <a href="https://wa.me/5492235192443?text=Quiero%20un%20trabajo%20a%20medida" target="_blank" rel="noopener" class="btn">
-            Pedir trabajo a medida
-          </a>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- GALERÍA (Instagram) -->
     <section id="galeria" class="section section-alt">
@@ -162,7 +114,7 @@
       </div>
       <div class="footer-links">
         <a href="#presentacion">Inicio</a>
-        <a href="#tienda">Tienda</a>
+        <a href="#galeria">Trabajos</a>
         <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
       </div>
@@ -171,6 +123,29 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    function gtag_report_conversion(url) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17395089750/BfYxCP79qegbENaCOOZA',
+        'event_callback': function() {
+          if (url) window.open(url, '_blank');
+        }
+      });
+      return false;
+    }
+    </script>
+<a href="#"
+   class="btn whatsapp"
+   onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20un%20encargo');">
+   Encargar por WhatsApp
+</a>
+<a href="#"
+   class="whatsapp-float"
+   onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20consultar');"
+   aria-label="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+    
 </body>
 </html>
-<!-- TEST NETLIFY 01/17/2026 12:06:56 -->
+
