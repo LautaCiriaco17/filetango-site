@@ -4,148 +4,151 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Filetango · Fileteado Porteño</title>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <meta name="description" content="Filetango · Fileteado porteño: trabajos por encargo, cartelería, letras y ornamentos.">
   <link rel="icon" href="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png">
+
+  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17395089750"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17395089750');
-</script>
-
-</head>
-<body>
-  <!-- NAV -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <img src="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png" alt="Filetango" class="brand-logo">
-        <span class="brand-text">Filetango</span>
-      </a>
-      <nav class="menu" id="menu">
-        <a href="#presentacion">Presentación</a>
-        <a href="#galeria">Trabajos</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto" class="btn btn-small">Contacto</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- PRESENTACIÓN / HERO -->
-    <section id="presentacion" class="section hero">
-      <div class="hero-slider" id="heroSlider" aria-label="Galería de trabajos Filetango">
-        <!-- Colocá tus fotos en assets/hero/ y agregalas acá -->
-        <img src="assets/hero/hero.png" alt="Trabajo de fileteado 1">
-        <img src="assets/hero/malvinas.jpg" alt="Trabajo de fileteado 2">
-        <img src="assets/hero/filetango.jpg" alt="Trabajo de fileteado 3">
-      </div>
-
-      <div class="hero-overlay">
-        <h1 class="display">Filetango</h1>
-        <p class="lead">
-          Bienvenid@. Soy Lautaro y hago <strong>fileteado porteño</strong> con amor por el oficio:
-          letras, ornamentos, cintas argentinas y flores. Paseá por los trabajos y,
-          si te gusta algo, ¡lo hacemos realidad!
-        </p>
-        <div class="cta-row">
-          <a href="#galeria" class="btn">Ver trabajos</a>
-          <a href="https://wa.me/5492235192443?text=Hola%20Filetango%2C%20quiero%20un%20encargo%20de%20fileteado" target="_blank" rel="noopener" class="btn btn-ghost">Escribirme por WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <!-- GALERÍA (Instagram) -->
-    <section id="galeria" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <h2>Galería</h2>
-          <p class="muted">Los últimos trabajos (se sincroniza con Instagram cuando lo activamos).</p>
-        </header>
-
-        <div id="ig-gallery" class="ig-grid"></div>
-
-        <div class="center mt-24">
-          <a href="https://instagram.com/filetango" target="_blank" rel="noopener" class="btn btn-ghost">
-            Ver más en Instagram
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section contact">
-      <div class="container center">
-        <header class="section-header">
-          <h2>Contacto</h2>
-          <p class="muted">¿Querés un presupuesto rápido? Escribime por WhatsApp.</p>
-        </header>
-
-        <a class="btn whatsapp" target="_blank" rel="noopener"
-           href="https://wa.me/5492235192443?text=Hola%20Lauti%2C%20quiero%20encargar%20fileteado">
-          WhatsApp
-        </a>
-
-        <p class="small mt-16 muted">
-          También podés seguirnos en <a href="https://instagram.com/filetango" target="_blank" rel="noopener">Instagram @filetango</a>.
-        </p>
-      </div>
-    </section>
-
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Filetango</strong><br/>
-        Fileteado porteño · Mar del Plata, Argentina
-      </div>
-      <div class="footer-links">
-        <a href="#presentacion">Inicio</a>
-        <a href="#galeria">Trabajos</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-      <div class="copy">© <span id="year"></span> Filetango</div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
   <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17395089750');
+
     function gtag_report_conversion(url) {
       gtag('event', 'conversion', {
         'send_to': 'AW-17395089750/BfYxCP79qegbENaCOOZA',
-        'event_callback': function() {
+        'event_callback': function () {
           if (url) window.open(url, '_blank');
         }
       });
       return false;
     }
-    </script>
-<a href="#"
-   class="btn whatsapp"
-   onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20un%20encargo');">
-   Encargar por WhatsApp
-</a>
+  </script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="assets/ChatGPT Image 1 oct 2025, 09_19_04 a.m..png" class="brand-logo" alt="Filetango">
+      <span class="brand-text">Filetango</span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#presentacion">Inicio</a>
+      <a href="#galeria">Galería</a>
+      <a href="#documental">Documental</a>
+      <a href="#contacto" class="btn btn-small">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section id="presentacion" class="section hero">
+  <div class="hero-overlay">
+    <h1 class="display">Filetango</h1>
+    <p class="lead">
+      Fileteado porteño con amor por el oficio. Letras, ornamentos,
+      cintas argentinas y flores. Si te gusta algo, lo hacemos realidad.
+    </p>
+
+    <div class="cta-row">
+      <a href="#galeria" class="btn">Ver trabajos</a>
+      <a href="#"
+         class="btn btn-ghost"
+         onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20un%20encargo');">
+        Escribirme por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" class="section section-alt">
+  <div class="container">
+    <header class="section-header">
+      <h2>Galería</h2>
+      <p class="muted">Algunos trabajos recientes.</p>
+    </header>
+
+    <div id="ig-gallery" class="ig-grid"></div>
+
+    <div class="center mt-24">
+      <a href="https://instagram.com/filetango" target="_blank" class="btn btn-ghost">
+        Ver más en Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTAL -->
+<section id="documental" class="section">
+  <div class="container">
+    <header class="section-header">
+      <h2>Los costados sentenciosos</h2>
+      <p class="muted">
+        Mini documental sobre oficio, calle y cultura visual porteña.
+      </p>
+    </header>
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/HkiHzPWn3NU" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/-iA_pU6MkQc" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/YqrI4kA4BD0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contact">
+  <div class="container center">
+    <h2>Contacto</h2>
+    <p class="muted">¿Querés un presupuesto rápido?</p>
+
+    <a href="#"
+       class="btn whatsapp"
+       onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20consultar');">
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Filetango</strong><br>
+      Mar del Plata, Argentina
+    </div>
+    <div class="footer-links">
+      <a href="#presentacion">Inicio</a>
+      <a href="#galeria">Galería</a>
+      <a href="#documental">Documental</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="copy">© 2026 Filetango</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT (ÚNICO, GLOBAL) -->
 <a href="#"
    class="whatsapp-float"
-   onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20consultar');"
+   onclick="return gtag_report_conversion('https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20un%20encargo');"
    aria-label="WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
-    
+
+<script src="main.js"></script>
 </body>
 </html>
-
