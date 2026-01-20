@@ -55,35 +55,59 @@
 <main id="top">
 
 <!-- HERO -->
-<section id="presentacion" class="section hero">
+<section id="presentacion" class="section hero" aria-label="Presentación Filetango">
   <div class="hero-overlay">
     <h1 class="display">Filetango</h1>
-    <div class="hero-slider" id="heroSlider">
-      <img src="assets/hero/hero.png" alt="Trabajo 1">
-      <img src="assets/hero/malvinas.jpg" alt="Trabajo 2">
-      <img src="assets/hero/filetango.jpg" alt="Trabajo 3">
+
+    <div class="hero-slider" id="heroSlider" aria-label="Galería destacada">
+      <!-- Primera imagen: principal -->
+      <img
+        src="assets/hero/hero.png"
+        alt="Fileteado porteño - trabajo destacado"
+        class="hero-slide is-active"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+      <!-- Resto de imágenes -->
+      <img
+        src="assets/hero/malvinas.jpg"
+        alt="Trabajo fileteado con temática Malvinas"
+        class="hero-slide"
+        loading="lazy"
+        decoding="async"
+      >
+      <img
+        src="assets/hero/filetango.jpg"
+        alt="Trabajo fileteado Filetango"
+        class="hero-slide"
+        loading="lazy"
+        decoding="async"
+     >
     </div>
-    
+
     <p class="lead">
       Fileteado porteño con amor por el oficio. Letras, ornamentos,
       cintas argentinas y flores. Si te gusta el oficio, lo hacemos realidad.
     </p>
 
     <div class="cta-row">
-      <a href="#documental" class="btn">
-        Ver el documental
-      </a>
+      <a href="#documental" class="btn">Ver el documental</a>
 
-      <a href="#"
-         class="btn btn-ghost"
-         onclick="return gtag_report_conversion(
-           'https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20hacer%20una%20consulta'
-         );">
+      <a
+        href="https://wa.me/5492235192443?text=Hola%20Filetango,%20quiero%20hacer%20una%20consulta"
+        class="btn btn-ghost"
+        target="_blank"
+        rel="noopener"
+        onclick="return gtag_report_conversion(this.href);"
+      >
         Escribirme por WhatsApp
       </a>
     </div>
   </div>
 </section>
+
 
 
 <!-- GALERÍA -->

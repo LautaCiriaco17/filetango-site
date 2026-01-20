@@ -131,4 +131,19 @@ async function loadInstagramGallery() {
 
 loadInstagramGallery();
 
+(function(){
+  const slider = document.getElementById("heroSlider");
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll(".hero-slide"));
+  if (slides.length <= 1) return;
+
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove("is-active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("is-active");
+  }, 3500);
+})();
+
 document.addEventListener('DOMContentLoaded', loadInstagramFeed);
