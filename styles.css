@@ -289,4 +289,84 @@
     opacity: 1;
     transform: scale(1);
   }
+/* =========================
+   HERO FULL WIDTH + OVERLAY
+========================= */
+
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Imágenes de fondo */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Imagen activa (si después animás el slider) */
+.hero-media img:first-child {
+  opacity: 1;
+}
+
+/* Overlay oscuro para legibilidad */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+/* Texto fijo arriba */
+.hero-overlay {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 0 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título */
+.hero .display {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 16px;
+}
+
+/* Párrafo */
+.hero .lead {
+  font-size: 1.2rem;
+  max-width: 700px;
+  opacity: 0.95;
+}
+
+/* CTA */
+.cta-row {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
   
