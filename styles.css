@@ -327,9 +327,19 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
   z-index: 2;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.45) 60%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 }
+.hero-overlay {
+  text-shadow: 0 8px 24px rgba(0,0,0,.6);
+}
+
 
 /* Texto fijo arriba */
 .hero-overlay {
@@ -369,4 +379,118 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-  
+  /* Estilos de Reseñas y Carrusel */
+.reviews-slider-container {
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: none; /* Oculta scrollbar en Firefox */
+}
+
+.reviews-slider-container::-webkit-scrollbar {
+  display: none; /* Oculta scrollbar en Chrome/Safari */
+}
+
+.reviews-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.review-card {
+  min-width: 300px;
+  flex: 0 0 auto;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-2);
+}
+
+.stars {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+/* En desktop quitamos el modo carrusel si preferís grilla fija o lo mantenemos */
+@media (min-width: 900px) {
+  .reviews-wrapper {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
+
+#resenas {
+  background: radial-gradient(circle, rgba(245,243,239,0.05) 0%, var(--bg) 100%);
+  padding-top: 40px;
+}
+/* ===== HERO SLIDER (crossfade) ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* El slider ocupa todo el hero */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Cada imagen: “cover” real, centrada, sin deformar */
+.hero-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  transform: scale(1.03); /* micro zoom para look cinematográfico */
+  transition: opacity 900ms ease, transform 3000ms ease;
+  will-change: opacity, transform;
+}
+
+/* Activa */
+.hero-slider img.is-active {
+  opacity: 1;
+  transform: scale(1.0);
+}
+
+/* Tu texto por arriba, fijo y siempre legible */
+.hero-overlay {
+  position: relative;
+  z-index: 3;
+}
+
+/* Si querés un toque más “film” sin matar la imagen */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.38) 60%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+/* Accesibilidad: sin animaciones si el usuario lo pide */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

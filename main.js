@@ -145,5 +145,69 @@ loadInstagramGallery();
     slides[i].classList.add("is-active");
   }, 3500);
 })();
+(function initHeroSlider() {
+  const slider = document.getElementById("heroSlider");
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll("img"));
+  if (slides.length <= 1) {
+    if (slides[0]) slides[0].classList.add("is-active");
+    return;
+  }
+
+  // Si el usuario prefiere menos movimiento: dejá la primera fija.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    slides.forEach((img, i) => img.classList.toggle("is-active", i === 0));
+    return;
+  }
+
+  let index = 0;
+  let timer = null;
+  const INTERVAL = 5200; // tiempo entre slides
+  const FADE_MS = 900;   // coincide con el CSS
+
+  function show(i) {
+    slides.forEach((img, idx) => {
+      img.classList.toggle("is-active", idx === i);
+      img.setAttribute("aria-hidden", idx === i ? "false" : "true");
+    });
+  }
+
+  function next() {
+    index = (index + 1) % slides.length;
+    show(index);
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(next, INTERVAL);
+  }
+
+  function stop() {
+    if (timer) clearInterval(timer);
+    timer = null;
+  }
+
+  // init
+  show(index);
+  start();
+
+  // Pausa cuando pasás el mouse (más “premium”)
+  slider.addEventListener("mouseenter", stop);
+  slider.addEventListener("mouseleave", start);
+
+  // Si la pestaña no está activa, no gastes recursos
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
+  });
+
+slides.forEach(img => {
+  const src = img.getAttribute("src");
+  const pre = new Image();
+  pre.src = src;
+});
 
 document.addEventListener('DOMContentLoaded', loadInstagramFeed);
+})();
